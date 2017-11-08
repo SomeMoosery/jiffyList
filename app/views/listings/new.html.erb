@@ -7,16 +7,26 @@
 </div>
 <div class="container">
   <div id="contact-area">
-    <form method="post" action="contactengine.php">
-      <label for="Name">Name:</label>
-      <input type="text" name="Name" id="Name" />
-      <label for="City">City:</label>
-      <input type="text" name="City" id="City" />
-      <label for="Email">Email:</label>
-      <input type="text" name="Email" id="Email" />
-      <label for="Message">Message:</label><br />
-      <textarea name="Message" rows="20" cols="20" id="Message"></textarea>
-      <input type="submit" name="submit" value="Submit" class="submit-button" />
-    </form>
+
+    <%= form_for @listing do |f| %>
+    <!-- taken from schem.rb -->
+    <%= f.label :title %>
+    <%= f.text_field :title %> <!-- use text field when body is just 1 line -->
+
+    <%= f.label :description %>
+    <%= f.text_area :description %> <!-- more for paragraphs -->
+
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+
+    <%= f.label :zipcode %>
+    <%= f.text_field :zipcode, class: "zip-width", maxlength: "5" %> <!-- just a class he made in the CSS file -->
+
+    <%= f.submit class: "create-button"%>
+
+    <% end %>
   </div>
 </div>
