@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   #NOTE USE rake routes TO SEE ALL ROUTES
 
   #Creates the CRUD actions for categories
-  resources 'categories' do
+  resources :categories do
     resources :subcategories #Creates CRUD actions for subcategories
   end
+
+  resources :listings
 
   root 'categories#index' #first page that we land on -- homepage
 

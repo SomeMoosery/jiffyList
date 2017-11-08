@@ -9,4 +9,8 @@ class CategoriesController < ApplicationController
     @services = @categories[4]
     @for_sale = @categories[5]
   end
+
+  def show
+  end
+  
 end
