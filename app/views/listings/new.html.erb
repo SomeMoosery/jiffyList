@@ -16,6 +16,16 @@
     <%= f.label :description %>
     <%= f.text_area :description %> <!-- more for paragraphs -->
 
+    <p>
+      <%= f.label :category_id %>
+      <%= f.select :category_id, Category.all.map{ |f| [f.name, f.id]} %>
+    </p>
+
+    <p>
+      <%= f.label :subcategroy_id %>
+      <%= f.select :subcategroy_id, Subcategory.all.map{ |f| [f.name, f.id]} %>
+    </p>
+
     <%= f.label :city %>
     <%= f.text_field :city %>
 

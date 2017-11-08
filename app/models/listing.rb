@@ -1,6 +1,6 @@
 class Listing < ActiveRecord::Base
-  belongs_to :category
-  belongs_to :subcategory
+  belongs_to :category, optional: true
+  belongs_to :subcategory, optional: true
 
 
 end
