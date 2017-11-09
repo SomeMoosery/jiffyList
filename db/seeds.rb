@@ -8,7 +8,7 @@
 
 #name based on community in schema.rb. where(...).first_or_create(...) means you only make this once even if run seed multiple times
 #use rake db:seed to create / run all this, rails c to open console
-#NOTE ALL MAIN CATEGORIES FOR BETTRLIST HOME PAGE
+#NOTE ALL MAIN CATEGORIES FOR jiffylist HOME PAGE
 community_category = Category.where(name: 'community').first_or_create(name: 'community')
 housing_category = Category.where(name: 'housing').first_or_create(name: 'housing')
 jobs_category = Category.where(name: 'jobs').first_or_create(name: 'jobs')
