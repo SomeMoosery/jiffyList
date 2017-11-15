@@ -10,3 +10,7 @@ To run:
 3. `rake db:migrate`
 4. `rake db:seed`
 5. `rails s` - this will typically serve on Port 3000
+
+Devise:
+1. rails generate devise:installed
+2. rails g devise:views
