@@ -25,4 +25,5 @@ Rails.application.routes.draw do
   match '/privacy', to: 'pages#privacy', via: :get
   match '/about', to: 'pages#about', via: :get
   match '/contact', to: 'pages#contact', via: :get
+  match '/myListings', to: 'listings#myListings', via: :get
 end
