@@ -6,26 +6,29 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#name based on community in schema.rb. where(...).first_or_create(...) means you only make this once even if run seed multiple times
+#name based on digital in schema.rb. where(...).first_or_create(...) means you only make this once even if run seed multiple times
 #use rake db:seed to create / run all this, rails c to open console
+
+Category.destroy_all
+
 #NOTE ALL MAIN CATEGORIES FOR jiffylist HOME PAGE
-community_category = Category.where(name: 'community').first_or_create(name: 'community')
+digital_category = Category.where(name: 'digital').first_or_create(name: 'digital')
 housing_category = Category.where(name: 'housing').first_or_create(name: 'housing')
-jobs_category = Category.where(name: 'jobs').first_or_create(name: 'jobs')
-personals_category = Category.where(name: 'personals').first_or_create(name: 'personals')
-services_category = Category.where(name: 'services').first_or_create(name: 'services')
-for_sale_category = Category.where(name: 'for_sale').first_or_create(name: 'for_sale')
+writing_category = Category.where(name: 'writing').first_or_create(name: 'writing')
+trade_category = Category.where(name: 'trade').first_or_create(name: 'trade')
 
-Subcategory.where(name: 'activities', category_id: community_category.id).first_or_create(name: 'activities', category_id: community_category.id)
-Subcategory.where(name: 'classes', category_id: community_category.id).first_or_create(name: 'classes', category_id: community_category.id)
-Subcategory.where(name: 'events', category_id: community_category.id).first_or_create(name: 'events', category_id: community_category.id)
+Subcategory.where(name: 'iPhone Repair', category_id: digital_category.id).first_or_create(name: 'iPhone Repair', category_id: digital_category.id)
+Subcategory.where(name: 'Samsung Galaxy Repair', category_id: digital_category.id).first_or_create(name: 'Samsung Galaxy Repair', category_id: digital_category.id)
+Subcategory.where(name: 'Web Dev', category_id: digital_category.id).first_or_create(name: 'Web Dev', category_id: digital_category.id)
 
-Subcategory.where(name: 'housing swap', category_id: housing_category.id).first_or_create(name: 'housing swap', category_id: housing_category.id)
+Subcategory.where(name: 'Furniture Moving', category_id: housing_category.id).first_or_create(name: 'Furniture Moving', category_id: housing_category.id)
+Subcategory.where(name: 'Piano Tuning', category_id: housing_category.id).first_or_create(name: 'Piano Tuning', category_id: housing_category.id)
+Subcategory.where(name: 'Appliance Repair', category_id: housing_category.id).first_or_create(name: 'Appliance Repair', category_id: housing_category.id)
 
-Subcategory.where(name: 'education', category_id: jobs_category.id).first_or_create(name: 'education', category_id: jobs_category.id)
+Subcategory.where(name: 'Editorial', category_id: writing_category.id).first_or_create(name: 'Editorial', category_id: writing_category.id)
+Subcategory.where(name: 'Blog Post', category_id: writing_category.id).first_or_create(name: 'Blog Post', category_id: writing_category.id)
+Subcategory.where(name: 'Interview Documentation', category_id: writing_category.id).first_or_create(name: 'Interview Documentation', category_id: writing_category.id)
 
-Subcategory.where(name: 'strictly platonic', category_id: personals_category.id).first_or_create(name: 'strictly platonic', category_id: personals_category.id) 
-
-Subcategory.where(name: 'legal', category_id: services_category.id).first_or_create(name: 'legal', category_id: services_category.id)
-
-Subcategory.where(name: 'antiques', category_id: for_sale_category.id).first_or_create(name: 'antiques', category_id: for_sale_category.id)
+Subcategory.where(name: 'Welding', category_id: trade_category.id).first_or_create(name: 'Welding', category_id: trade_category.id)
+Subcategory.where(name: 'Plumbing', category_id: trade_category.id).first_or_create(name: 'Plumbing', category_id: trade_category.id)
+Subcategory.where(name: 'Wiring', category_id: trade_category.id).first_or_create(name: 'Wiring', category_id: trade_category.id)
