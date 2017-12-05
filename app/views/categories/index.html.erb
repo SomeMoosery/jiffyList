@@ -15,29 +15,14 @@
     </ul>
       <%= form_tag search_listings_path, method: :get do |f| %>
       <p>search jiffylist</p>
-      <%= text_field_tag :search, nil, placeholder: 'search' %>
-      <%= text_field_tag :location, nil, placeholder: 'near' %>
-      <%= select_tag :category, options_for_select(Category.all.map{ |c| [c.name, c.id]}) %>
-      <%= submit_tag '>' %>
+      <p><%= text_field_tag :search, nil, placeholder: 'search' %></p>
+      <p><%= text_field_tag :location, nil, placeholder: 'near' %></p>
+      <p><%= select_tag :category, options_for_select(Category.all.map{ |c| [c.name, c.id]}) %></p>
+      <p><%= submit_tag '>' %></p>
       <% end %>
   </div>
   <div class="center-column" >
     <div class="center-one">
-      <table>
-        <tr>
-          <th class="table-header"><%= link_to 'Digital', category_path(@digital) %></th> <!-- 'show' digital parameter from rake routes -->
-        </tr>
-        <tr>
-          <td>
-            <!--list all subcategories-->
-            <% @digital.subcategories.each do |subcategory| %>
-            <ul class="left-list">
-              <li><%= link_to subcategory.name, category_subcategory_path(@digital, subcategory) %></li> <!-- passes in digital id, subcategory id-->
-            </ul>
-            <% end %>
-          </td>
-        </tr>
-      </table>
       <table>
         <tr>
           <th class="table-header"><%= link_to 'Housing', category_path(@housing) %></th>
@@ -46,7 +31,7 @@
           <td>
             <ul>
               <% @housing.subcategories.each do |subcategory| %>
-              <ul class="left-list">
+              <ul>
                 <li><%= link_to subcategory.name, category_subcategory_path(@housing, subcategory) %></li>
               </ul>
               <% end %>
@@ -60,9 +45,9 @@
         </tr>
         <tr>
           <td>
-            <ul class="left-list">
+            <ul>
               <% @writing.subcategories.each do |subcategory| %>
-              <ul class="left-list">
+              <ul>
                 <li><%= link_to subcategory.name, category_subcategory_path(@writing, subcategory) %></li>
               </ul>
               <% end %>
@@ -88,6 +73,21 @@
       </table>
     </div>
     <div class="center-three">
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'Digital', category_path(@digital) %></th> <!-- 'show' digital parameter from rake routes -->
+        </tr>
+        <tr>
+          <td>
+            <!--list all subcategories-->
+            <% @digital.subcategories.each do |subcategory| %>
+            <ul>
+              <li><%= link_to subcategory.name, category_subcategory_path(@digital, subcategory) %></li> <!-- passes in digital id, subcategory id-->
+            </ul>
+            <% end %>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
   <div class="rightbar">

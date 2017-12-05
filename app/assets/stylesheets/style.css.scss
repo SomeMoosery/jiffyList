@@ -1,7 +1,7 @@
 .container {
   margin: auto;
-  width: 855px;
-  height: 100%;
+  width: 80%;
+  height: 100vh;
   footer {
     margin-top: 20px;
   }
@@ -14,7 +14,7 @@
 
   body {
     font-size: 62.5%;
-    font-family: Helvetica, sans-serif;
+    font-family: "Times New Roman", sans-serif;
   }
 
   #page-wrap {
@@ -39,7 +39,7 @@
       display: block;
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
-      background: #f4f4f4;
+      background: #d1e2ff;
       margin-bottom: 20px;
     }
     .signin-button {
@@ -61,7 +61,7 @@
     font-family: Helvetica, sans-serif;
     font-size: 12px;
     margin: 0px 0px 10px 0px;
-    border: 2px solid #ccc;
+    border: 2px solid #adbedb;
   }
 
   #contact-area textarea {
@@ -104,23 +104,27 @@
 .topbar {
   background: #eee;
   margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #adbedb;
   height: 40px;
 }
 .leftbar {
   float: left;
   width: 19%;
-  background: #f4f4f4;
-  border-left: 1px #ccc solid;
-  border-right: 1px #ccc solid;
+  background: #d1e2ff;
+  border-left: 1px #adbedb solid;
+  border-right: 1px #adbedb solid;
   margin-right: 18px;
-  height: 500px;
+  height: 100%;
   ul {
     margin-top: 20px;
     text-align: center;
     li {
       margin-bottom: 15px;
     }
+  }
+  p {
+    margin: auto;
+    margin-bottom: 1em;
   }
   a {
     text-decoration: none;
@@ -154,35 +158,35 @@
     margin-right: 25px;
     table {
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 100px;
     }
     .left-list {
       float: left;
       width: 50%;
       li {
-        border-bottom: 1px #f4f4f4 solid;
-        width: 50px;
+        border-bottom: 1px #d1e2ff solid;
+        width: 50%;
       }
     }
     .right-list {
       float: right;
       width: 50%;
       li {
-        border-bottom: 1px #f4f4f4 solid;
-        width: 50px;
+        border-bottom: 1px #d1e2ff solid;
+        //width: 50%;
       }
     }
     .table-header {
       text-align: center;
-      background: #f4f4f4;
+      background: #d1e2ff;
       font-size: 20px;
       font-weight: bold;
       padding: 2px 5px;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #adbedb;
+      border-bottom: 1px solid #adbedb;
     }
     li {
-      border-bottom: 1px #f4f4f4 solid;
+      border-bottom: 1px #d1e2ff solid;
     }
   }
   .center-two {
@@ -190,13 +194,13 @@
     display: inline-table;
     table {
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 100px;
     }
     .left-list {
       float: left;
       width: 50%;
       li {
-        border-bottom: 1px #f4f4f4 solid;
+        border-bottom: 1px #d1e2ff solid;
         width: 50px;
       }
     }
@@ -204,21 +208,21 @@
       float: right;
       width: 50%;
       li {
-        border-bottom: 1px #f4f4f4 solid;
+        border-bottom: 1px #d1e2ff solid;
         width: 50px;
       }
     }
     .table-header {
       text-align: center;
-      background: #f4f4f4;
+      background: #d1e2ff;
       font-size: 20px;
       font-weight: bold;
       padding: 2px 5px;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #adbedb;
+      border-bottom: 1px solid #adbedb;
     }
     li {
-      border-bottom: 1px #f4f4f4 solid;
+      border-bottom: 1px #d1e2ff solid;
     }
   }
   .center-three {
@@ -226,18 +230,19 @@
     float: right;
     table {
       width: 100%;
+      margin-bottom: 100px;
     }
     .table-header {
       text-align: center;
-      background: #f4f4f4;
+      background: #d1e2ff;
       font-size: 20px;
       font-weight: bold;
       padding: 2px 5px;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #adbedb;
+      border-bottom: 1px solid #adbedb;
     }
     li {
-      border-bottom: 1px #f4f4f4 solid;
+      border-bottom: 1px #d1e2ff solid;
     }
   }
 }
@@ -245,10 +250,10 @@
 .rightbar {
   float: right;
   width: 19%;
-  background: #f4f4f4;
-  border-left: 1px #ccc solid;
-  border-right: 1px #ccc solid;
-  height: 500px;
+  background: #d1e2ff;
+  border-left: 1px #adbedb solid;
+  border-right: 1px #adbedb solid;
+  height: 100%;
   li {
     text-align: center;
     margin-top: 15px;
@@ -267,7 +272,7 @@
 .box {
   display: block;
   background: #fafafa;
-  border: 1px solid #ccc;
+  border: 1px solid #adbedb;
   border-radius: .25em;
   width: 300px;
   height: 50px;
@@ -289,32 +294,32 @@
   padding: 5px 0;
   display: block;
   border-radius: 5px;
-  border: 1px #ccc solid;
+  border: 1px #adbedb solid;
 }
 .oldest {
   padding: 5px 0;
   display: block;
   border-radius: 5px;
-  border: 1px #ccc solid;
+  border: 1px #adbedb solid;
 }
 .highest-price {
   padding: 5px 0;
   display: block;
   border-radius: 5px;
-  border: 1px #ccc solid;
+  border: 1px #adbedb solid;
 }
 .lowest-price {
   padding: 5px 0;
   display: block;
   border-radius: 5px;
-  border: 1px #ccc solid;
+  border: 1px #adbedb solid;
 }
 .sort-row div {
   display: inline;
   vertical-align: baseline;
   .search-sort {
     display: block;
-    border: 1px solid #ccc;
+    border: 1px solid #adbedb;
     margin-bottom: 30px;
     width: 100px;
   }
